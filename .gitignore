@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and sub files
+data/*
+!data/sample_submission.csv
+submissions/
+
+# IDE files
+.vscode/
+.idea/
+.ipynb_checkpoints/
