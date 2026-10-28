@@ -1,5 +1,7 @@
 # squares-in-squares-optimization
 Decades-old open combinatorial geometry problem solved using Meta-heuristics and Simulated Annealing on Kaggle.
+
+implementing a hybrid approach of Grid-Initialization paired with Simulated Annealing (with Rotations
 ```
 squares-in-squares-optimization/
 │
