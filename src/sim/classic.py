@@ -22,7 +22,9 @@ total_no_id = no_of_puzzles*(no_of_puzzles+1)/2
 n = 0
 ln = 0
 id = 0
-x, y, angle = 0
+x = 0
+y = 0
+angle = 0
 while id < total_no_id:
     # for id in range(total_no_id):
     # for n in range(id):
