@@ -12,7 +12,6 @@ file_is_empty = not os.path.exists(csv_filename) or os.stat(csv_filename).st_siz
 # 'newline=""' is critical to prevent blank lines between rows on Windows platforms
 with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
-    
     # 4. Write the header only on the very first run/creation
     if file_is_empty:
         writer.writerow(headers)
@@ -47,8 +46,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 id = id +1
                 # 6. Write the exact parameters for this specific step to the CSV
             writer.writerow([id, n, square_id, x, y, angle])
-        print("Data successfully logged iteration-by-iteration!")
-    
+        print("next line Data value added successfully")
+    print("Data successfully logged iteration-by-iteration!")
 """
 no_of_puzzles = 1000
 total_no_id = no_of_puzzles*(no_of_puzzles+1)/2
