@@ -16,15 +16,6 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     # 4. Write the header only on the very first run/creation
     if file_is_empty:
         writer.writerow(headers)
-  """  
-    # 5. Your nested loops
-    for a in range(1, 3):
-        for b in range(10, 30, 10):
-            for c in [0.1, 0.2]:
-                
-                # Perform your calculations here
-                sim_result = a * b + c 
-    """ 
 no_of_puzzles = 1000
 total_no_id = no_of_puzzles*(no_of_puzzles+1)/2
 # n = 1
