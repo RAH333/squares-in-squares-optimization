@@ -2,6 +2,7 @@ import os
 from tqdm import tqdm
 from src.config import Config
 from src.solvers import optimize_packing_sa
+# from src.gpu_solvers import optimize_packing_cuda
 from src.geometry import compute_bounding_box
 from src.utils import calculate_competition_score, generate_submission_csv
 
