@@ -16,6 +16,40 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     # 4. Write the header only on the very first run/creation
     if file_is_empty:
         writer.writerow(headers)
+    no_of_puzzles = 1000
+    total_no_id = no_of_puzzles*(no_of_puzzles+1)/2
+    # n = 1
+    n = 0
+    ln = 0
+    id = 0
+    x = 0
+    y = 0
+    angle = 0
+    while id < total_no_id:
+        # for id in range(total_no_id):
+        # for n in range(id):
+        if id == n*(n+1)/2:
+            n = n + 1
+        for square_id in range(n):
+            if ln*ln < n <= ln*ln+(ln-1)*(ln-1):
+                # for square_id in range(n):
+                xl = 0
+                yl = 0
+            if square_id % 2 != 0:
+                x = 0.5
+                y = 0.5
+                angle = 3.14/4
+            elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
+                # for square_id in range(n):
+                x = 0.5
+                y = 0.5
+                angle = 0
+                id = id +1
+                # 6. Write the exact parameters for this specific step to the CSV
+            writer.writerow([id, n, square_id, x, y, angle])
+        print("Data successfully logged iteration-by-iteration!")
+    
+"""
 no_of_puzzles = 1000
 total_no_id = no_of_puzzles*(no_of_puzzles+1)/2
 # n = 1
@@ -48,7 +82,7 @@ while id < total_no_id:
         # 6. Write the exact parameters for this specific step to the CSV
         writer.writerow([id, n, square_id, x, y, angle])
     print("Data successfully logged iteration-by-iteration!")
-
+"""
 
 """
   for square_id in range(n):
