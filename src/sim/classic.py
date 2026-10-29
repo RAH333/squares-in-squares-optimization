@@ -47,9 +47,9 @@ while id < total_no_id:
   elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
     if 
     for square_id in range(n):
-    x = 0.5
-    y = 0.5
-    angle
+        x = 0.5
+        y = 0.5
+        angle = 0
   id = id +1
   # 6. Write the exact parameters for this specific step to the CSV
   writer.writerow([id, n, square_id, x, y, angle])
