@@ -5,7 +5,11 @@ for id in range(total_no_id):
   # for n in range(id):
   if id == n*(n+1)/2:
     n = n + 1
+  if n*n<= and <= n+(n-1)
     for square_id in range(n):
       x = 0.5
       y = 0.5
       angle
+## if id == n*(n+1)/2:
+    ## n = n + 1
+  ## if n*n<= and <= n+(n-1)
