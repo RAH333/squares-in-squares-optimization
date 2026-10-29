@@ -25,6 +25,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     y = 0
     angle = 0
     while id < total_no_id:
+        if id ==11:
+            break
         # for id in range(total_no_id):
         # for n in range(id):
         if id == n*(n+1)/2:
