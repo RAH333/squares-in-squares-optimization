@@ -47,12 +47,12 @@ while id < total_no_id:
 print("Data successfully logged iteration-by-iteration!")
 
 
-  """
+"""
   for square_id in range(n):
     x = 0.5
     y = 0.5
     angle
-  """
+"""
 ## if id == n*(n+1)/2:
     ## n = n + 1
   ## if n*n<= and <= n+(n-1)
