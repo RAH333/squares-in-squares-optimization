@@ -11,6 +11,7 @@ squares-in-squares-optimization/
 │
 ├── src/
 │   ├── __init__.py
+│   ├── gpu_solvers.py     # नया: CUDA Accelerated PyTorch packing engine
 │   ├── config.py          # Global constants, hyper-parameters, and file paths
 │   ├── geometry.py        # Core overlap checks, container size computation, and coordinate math
 │   ├── solvers.py         # Simulated Annealing engine and packing algorithms
