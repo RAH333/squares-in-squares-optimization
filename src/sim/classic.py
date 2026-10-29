@@ -25,7 +25,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     y = 0
     angle = 0
     while id < total_no_id:
-        if id ==11:
+        if id == 11:
             break
         # for id in range(total_no_id):
         # for n in range(id):
@@ -48,7 +48,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
             id = id +1
             # 6. Write the exact parameters for this specific step to the CSV
             writer.writerow([id, n, square_id, x, y, angle])
-        print(f"{id} no line Data value added successfully")
+            print(f"{id} no line Data value added successfully")
     print("Data successfully logged iteration-by-iteration!")
 """
 no_of_puzzles = 1000
