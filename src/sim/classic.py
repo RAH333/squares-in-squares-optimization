@@ -36,7 +36,6 @@ while id < total_no_id:
         y = 0.5
         angle = 3.14/4
   elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
-    if 
     for square_id in range(n):
         x = 0.5
         y = 0.5
