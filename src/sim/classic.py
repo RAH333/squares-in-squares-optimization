@@ -30,12 +30,13 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         xl = 0
         yl = 0
         hl = 0
+        vc = 0
         if id == n*(n+1)/2:
             n = n + 1
         for square_id in range(n):
             if ln*ln < n <= ln*ln+(ln-1)*(ln-1) or n == 1:
-                xl = 0
-                yl = 0
+                # xl = 0
+                # yl = 0
                 """
                 if square_id % 2 != 0:
                     x = 0.5
@@ -45,6 +46,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 """
                 # if 0 <= square_id < 2*ln-1:
                 if hl* <= square_id < 2*ln-1:
+                    # if square_id % 2 != 0:
                     if square_id % 2 != 0:
                         x = xl + 0.3535533905932
                         y = yl + 
@@ -53,6 +55,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         xl = xl + 0.7071067811865
                         yl = yl + 
                     elif square_id % 2 == 0:
+                        # elif square_id % 2 == 0:
                         x = xl + 0.5
                         y = yl + 0.5
                         angle = 0
