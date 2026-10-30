@@ -47,7 +47,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 # if 0 <= square_id < 2*ln-1:
                 if hl* <= square_id < 2*ln-1:
                     # if square_id % 2 != 0:
-                    if square_id % 2 != 0:
+                    if math.check(hl,vc):
+                    # if square_id % 2 != 0:
                         x = xl + 0.3535533905932
                         y = yl + 
                         angle = 3.14/4 # 22/7/4
