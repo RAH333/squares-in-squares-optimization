@@ -24,6 +24,9 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     x = 0
     y = 0
     angle = 0
+    # a = math.pi/4
+    # sdvh = 0.5/math.sqrt(2)
+    # s = 0.5*math.sqrt(2) 
     while id < total_no_id:
         if id >= 11: #
             break #
