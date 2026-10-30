@@ -29,6 +29,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
             break #
         xl = 0
         yl = 0
+        hl = 0
         if id == n*(n+1)/2:
             n = n + 1
         for square_id in range(n):
@@ -42,16 +43,31 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     angle = 3.14/4 # 22/7/4
                     # angle = math.pi/4
                 """
-                if 0 <= square_id < 2*ln-1:
+                # if 0 <= square_id < 2*ln-1:
+                if hl* <= square_id < 2*ln-1:
                     if square_id % 2 != 0:
-                    x = 0.5
-                    y = 0.5
-                    angle = 3.14/4 # 22/7/4
-                    # angle = math.pi/4
+                        x = xl + 0.3535533905932
+                        y = yl + 
+                        angle = 3.14/4 # 22/7/4
+                        # angle = math.pi/4
+                        xl = xl + 0.7071067811865
+                        yl = yl + 
+                    elif square_id % 2 == 0:
+                        x = xl + 0.5
+                        y = yl + 0.5
+                        angle = 0
+                        xl = xl + 1
+                        yl = yl
+                elif 
             elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
-                x = 0.5
-                y = 0.5
+                x = xl + 0.5
+                y = yl + 0.5
                 angle = 0
+                xl = xl + 1
+                yl = yl
+                # x = 0.5
+                # y = 0.5
+                # angle = 0
                 if n == (ln+1)*(ln+1):
                     ln = ln+1
             # 6. Write the exact parameters for this specific step to the CSV
