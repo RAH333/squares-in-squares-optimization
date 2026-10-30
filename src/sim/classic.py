@@ -25,17 +25,14 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     y = 0
     angle = 0
     while id < total_no_id:
-        if id >= 11:
-            break
-        # for id in range(total_no_id):
-        # for n in range(id):
+        if id >= 11: #
+            break #
         xl = 0
         yl = 0
         if id == n*(n+1)/2:
             n = n + 1
         for square_id in range(n):
             if ln*ln < n <= ln*ln+(ln-1)*(ln-1) or n ==1:
-                # for square_id in range(n):
                 xl = 0
                 yl = 0
             if square_id % 2 != 0:
@@ -43,7 +40,6 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 y = 0.5
                 angle = 3.14/4
             elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
-                # for square_id in range(n):
                 x = 0.5
                 y = 0.5
                 angle = 0
@@ -54,49 +50,3 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
             id = id +1
             print(f"{id} no line Data value added successfully")
     print("Data successfully logged iteration-by-iteration!")
-"""
-no_of_puzzles = 1000
-total_no_id = no_of_puzzles*(no_of_puzzles+1)/2
-# n = 1
-n = 0
-ln = 0
-id = 0
-x = 0
-y = 0
-angle = 0
-while id < total_no_id:
-    # for id in range(total_no_id):
-    # for n in range(id):
-    if id == n*(n+1)/2:
-        n = n + 1
-    for square_id in range(n):
-        if ln*ln < n <= ln*ln+(ln-1)*(ln-1):
-            # for square_id in range(n):
-            xl = 0
-            yl = 0
-        if square_id % 2 != 0:
-            x = 0.5
-            y = 0.5
-            angle = 3.14/4
-        elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
-            # for square_id in range(n):
-            x = 0.5
-            y = 0.5
-            angle = 0
-        id = id +1
-        # 6. Write the exact parameters for this specific step to the CSV
-        writer.writerow([id, n, square_id, x, y, angle])
-    print("Data successfully logged iteration-by-iteration!")
-"""
-
-"""
-  for square_id in range(n):
-    x = 0.5
-    y = 0.5
-    angle
-"""
-## if id == n*(n+1)/2:
-    ## n = n + 1
-  ## if n*n<= and <= n+(n-1)
-# add value in csv file as next line
-# id,n,square_id,x,y,angle;
