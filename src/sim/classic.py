@@ -32,13 +32,22 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         if id == n*(n+1)/2:
             n = n + 1
         for square_id in range(n):
-            if ln*ln < n <= ln*ln+(ln-1)*(ln-1) or n ==1:
+            if ln*ln < n <= ln*ln+(ln-1)*(ln-1) or n == 1:
                 xl = 0
                 yl = 0
-            if square_id % 2 != 0:
-                x = 0.5
-                y = 0.5
-                angle = 3.14/4
+                """
+                if square_id % 2 != 0:
+                    x = 0.5
+                    y = 0.5
+                    angle = 3.14/4 # 22/7/4
+                    # angle = math.pi/4
+                """
+                if 0 <= square_id < 2*ln-1:
+                    if square_id % 2 != 0:
+                    x = 0.5
+                    y = 0.5
+                    angle = 3.14/4 # 22/7/4
+                    # angle = math.pi/4
             elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
                 x = 0.5
                 y = 0.5
