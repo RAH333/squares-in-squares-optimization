@@ -37,7 +37,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         if id == n*(n+1)/2:
             n = n + 1
         for square_id in range(n):
-            if ln*ln < n <= ln*ln+(ln-1)*(ln-1) or n == 1:
+            ### if ln*ln < n <= ln*ln+(ln-1)*(ln-1) or n == 1:
+            if ln*ln < n <= ln*ln+(ln-1)*(ln-1):
                 # xl = 0
                 # yl = 0
                 """
@@ -80,7 +81,19 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 # x = 0.5
                 # y = 0.5
                 # angle = 0
-                if n == (ln+1)*(ln+1):
+                ## if n == (ln+1)*(ln+1):
+                    ##ln = ln+1
+            elif n == (ln+1)*(ln+1):
+                x = xl + 0.5
+                y = yl + 0.5
+                angle = 0
+                if hl < ln:
+                xl = xl + 1
+                if vc == ln:
+                    hl = hl+1
+                
+                yl = yl + 1
+                if (hl+1)*(vc+1):
                     ln = ln+1
             # 6. Write the exact parameters for this specific step to the CSV
             writer.writerow([id, n, square_id, x, y, angle])
