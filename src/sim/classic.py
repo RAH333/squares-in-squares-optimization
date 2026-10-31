@@ -84,16 +84,20 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 ## if n == (ln+1)*(ln+1):
                     ##ln = ln+1
             elif n == (ln+1)*(ln+1):
-                x = xl + 0.5
-                y = yl + 0.5
+                ## x = xl + 0.5
+                ## y = yl + 0.5
                 angle = 0
-                if hl < ln:
-                xl = xl + 1
-                if vc == ln:
+                if vc < ln:
+                    x = xl + 0.5
+                    y = yl + 0.5
+                    xl = xl + 1
+                    vc = vc + 1
+                elif vc == ln:
                     hl = hl+1
-                
-                yl = yl + 1
-                if (hl+1)*(vc+1):
+                    vc = 0
+                    xl= 0
+                    yl = yl + 1
+                if n == (hl+1)*(vc+1):
                     ln = ln+1
             # 6. Write the exact parameters for this specific step to the CSV
             writer.writerow([id, n, square_id, x, y, angle])
