@@ -72,7 +72,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 elif square_id == hl*vc + 2*ln-1:
                     hl = hl + 1
                     vc = 0
-            elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
+            ## elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
+            elif ln*ln+(ln-1)*(ln-1) < n < (ln+1)*(ln+1):
                 x = xl + 0.5
                 y = yl + 0.5
                 angle = 0
