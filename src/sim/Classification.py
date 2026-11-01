@@ -37,59 +37,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         if id == n*(n+1)/2:
             n = n + 1
         for square_id in range(n):
-            ### if ln*ln < n <= ln*ln+(ln-1)*(ln-1) or n == 1:
-            """
-            if ln*ln < n <= ln*ln+(ln-1)*(ln-1):
-                # xl = 0
-                # yl = 0
-                "" "
-                if square_id % 2 != 0:
-                    x = 0.5
-                    y = 0.5
-                    angle = 3.14/4 # 22/7/4
-                    # angle = math.pi/4
-                "" "
-                # if 0 <= square_id < 2*ln-1:
-                if hl*vc <= square_id < hl*vc + 2*ln-1: ## 
-                ## if hl* <= square_id < 2*ln-1:
-                    # if square_id % 2 != 0: 
-                    ## if (hl + square_id) % 2 == 0:
-                    if math.check(hl,vc): ##
-                    # if square_id % 2 != 0:
-                        x = xl + 0.3535533905932
-                        y = yl + 
-                        angle = 3.14/4 # 22/7/4
-                        # angle = math.pi/4
-                        xl = xl + 0.7071067811865
-                        yl = yl + 
-                    elif (hl + square_id) % 2 == 0:
-                        # elif square_id % 2 == 0: 
-                        # elif square_id % 2 == 0:
-                        x = xl + 0.5
-                        y = yl + 0.5
-                        angle = 0
-                        xl = xl + 1
-                        yl = yl
-                elif square_id == hl*vc + 2*ln-1:
-                    hl = hl + 1
-                    vc = 0
-            ## elif ln*ln+(ln-1)*(ln-1) < n <= (ln+1)*(ln+1):
-            elif ln*ln+(ln-1)*(ln-1) < n < (ln+1)*(ln+1):
-                x = xl + 0.5
-                y = yl + 0.5
-                angle = 0
-                xl = xl + 1
-                yl = yl
-                # x = 0.5
-                # y = 0.5
-                # angle = 0
-                ## if n == (ln+1)*(ln+1):
-                    ##ln = ln+1
-            """
             if n == ln*ln+1:
-                ## elif n == (ln+1)*(ln+1):
-                ## x = xl + 0.5
-                ## y = yl + 0.5
                 angle = 0
                 if vc < ln:
                     # if vc ==1 and hl == 0:
@@ -115,9 +63,6 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         ln = ln+1
                     vc = 0
             elif n == (ln+1)*(ln+1) or n != ln*ln+1:
-                ## elif n == (ln+1)*(ln+1):
-                ## x = xl + 0.5
-                ## y = yl + 0.5
                 angle = 0
                 if vc < ln:
                     x = xl + 0.5
@@ -132,8 +77,6 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     if n == (hl+1)*(vc+1):
                         ln = ln+1
                     vc = 0
-                # if n == (hl+1)*(vc+1):
-                    # ln = ln+1
             # 6. Write the exact parameters for this specific step to the CSV
             writer.writerow([id, n, square_id, x, y, angle])
             id = id +1
