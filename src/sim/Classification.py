@@ -107,7 +107,10 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     hl = hl+1
                     # vc = 0
                     xl= 0
-                    yl = yl + 1
+                    if hl == 0:
+                        yl = yl + 1 + 0.7071067811865
+                    elif hl != 0:
+                        yl = yl + 1
                     if n == (hl+1)*(vc+1):
                         ln = ln+1
                     vc = 0
