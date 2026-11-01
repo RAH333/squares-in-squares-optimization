@@ -28,8 +28,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     # sdvh = 0.5/math.sqrt(2)
     # s = 0.5*math.sqrt(2) 
     while id < total_no_id:
-        if id >= 11: #
-            break #
+        # if id >= 11: #
+            # break #
         xl = 0
         yl = 0
         hl = 0
