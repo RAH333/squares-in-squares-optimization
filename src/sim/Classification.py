@@ -84,7 +84,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 # angle = 0
                 ## if n == (ln+1)*(ln+1):
                     ##ln = ln+1
-            elif n == (ln+1)*(ln+1):
+            elif n == (ln+1)*(ln+1) or n != ln*ln+1:
+                ## elif n == (ln+1)*(ln+1):
                 ## x = xl + 0.5
                 ## y = yl + 0.5
                 angle = 0
