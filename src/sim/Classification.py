@@ -38,6 +38,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
             n = n + 1
         for square_id in range(n):
             ### if ln*ln < n <= ln*ln+(ln-1)*(ln-1) or n == 1:
+            """
             if ln*ln < n <= ln*ln+(ln-1)*(ln-1):
                 # xl = 0
                 # yl = 0
@@ -84,6 +85,32 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 # angle = 0
                 ## if n == (ln+1)*(ln+1):
                     ##ln = ln+1
+            """
+            if n == ln*ln+1:
+                ## elif n == (ln+1)*(ln+1):
+                ## x = xl + 0.5
+                ## y = yl + 0.5
+                angle = 0
+                if vc < ln:
+                    # if vc ==1 and hl == 0:
+                    if vc ==1:
+                        if hl == 0:
+                            x = xl + 0.3535533905932
+                            y = yl + 1 + 0.3535533905932
+                        xl = xl + 0.7071067811865
+                    if vc !=1:
+                        x = xl + 0.5
+                        y = yl + 0.5
+                        xl = xl + 1
+                    vc = vc + 1
+                elif vc == ln:
+                    hl = hl+1
+                    # vc = 0
+                    xl= 0
+                    yl = yl + 1
+                    if n == (hl+1)*(vc+1):
+                        ln = ln+1
+                    vc = 0
             elif n == (ln+1)*(ln+1) or n != ln*ln+1:
                 ## elif n == (ln+1)*(ln+1):
                 ## x = xl + 0.5
