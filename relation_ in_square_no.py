@@ -1,3 +1,5 @@
+# src/relations/relation_ in_square_no.py
+
 n = 0 #:No of square in specific axis aling side
 
 if n*n + (n-1)*(n-1) == (n+1)*(n+1):
