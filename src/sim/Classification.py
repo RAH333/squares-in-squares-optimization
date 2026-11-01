@@ -42,13 +42,13 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
             if ln*ln < n <= ln*ln+(ln-1)*(ln-1):
                 # xl = 0
                 # yl = 0
-                """
+                "" "
                 if square_id % 2 != 0:
                     x = 0.5
                     y = 0.5
                     angle = 3.14/4 # 22/7/4
                     # angle = math.pi/4
-                """
+                "" "
                 # if 0 <= square_id < 2*ln-1:
                 if hl*vc <= square_id < hl*vc + 2*ln-1: ## 
                 ## if hl* <= square_id < 2*ln-1:
