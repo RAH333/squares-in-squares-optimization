@@ -1,5 +1,6 @@
 import csv
 import os
+import math
 
 # 1. Define your file name and headers (parameter names)
 csv_filename = "parameter_log.csv"
@@ -28,8 +29,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     # sdvh = 0.5/math.sqrt(2)
     # s = 0.5*math.sqrt(2) 
     while id < total_no_id:
-        # if id >= 11: #
-            # break #
+        if id >= 40: #
+            break #
         xl = 0
         yl = 0
         hl = 0
@@ -38,7 +39,10 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
             n = n + 1
         for square_id in range(n):
             if n == ln*ln+1:
-                angle = 0
+                if hl == 0 and vc == 1:
+                    angle = math.pi/4
+                else:
+                    angle = 0
                 if vc < ln:
                     # if vc ==1 and hl == 0:
                     if vc ==1:
