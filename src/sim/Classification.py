@@ -71,7 +71,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
             elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
                 print(f"in the elif statament ln = {ln}")
                 angle = 0
-                if vc < ln and vc == 0:
+                if vc < ln or vc == 0:
                     ## if vc < ln:
                     x = xl + 0.5
                     y = yl + 0.5
