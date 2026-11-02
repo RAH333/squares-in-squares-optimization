@@ -66,8 +66,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     ## if n == (hl+1)*(vc+1):
                         ## ln = ln+1
                     vc = 0
-            elif ln*ln < n <= (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
-                ## elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
+              ## elif ln*ln < n <= (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
+            elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
                 angle = 0
                 if vc < ln:
                     x = xl + 0.5
