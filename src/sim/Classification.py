@@ -38,7 +38,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         if id == n*(n+1)/2:
             n = n + 1
         for square_id in range(n):
-            if n == ln*ln+1:
+            if n == (ln*ln)+1:
                 if hl == 0 and vc == 1:
                     angle = math.pi/4
                 else:
@@ -63,8 +63,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         yl = yl + 1 + 0.7071067811865
                     elif hl != 0:
                         yl = yl + 1
-                    if n == (hl+1)*(vc+1):
-                        ln = ln+1
+                    ## if n == (hl+1)*(vc+1):
+                        ## ln = ln+1
                     vc = 0
             elif n == (ln+1)*(ln+1) or n != ln*ln+1:
                 angle = 0
