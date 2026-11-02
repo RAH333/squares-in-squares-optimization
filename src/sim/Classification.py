@@ -42,8 +42,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         for square_id in range(n):
             print(f"At the start of (square id )= {square_id}")
             print(f"In the for loop (ln) = {ln}")
-            # if n == ((ln*ln)+1) and ln != 0:
-            if n == ((ln+1)*(ln+1)+1):
+            if n == ((ln*ln)+1) and ln != 0:
+                # if n == ((ln+1)*(ln+1)+1):
                 print(f"in the if statament ln = {ln}")
                 if hl == 0 and vc == 1:
                     angle = math.pi/4
