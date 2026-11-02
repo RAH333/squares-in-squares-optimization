@@ -29,6 +29,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     # sdvh = 0.5/math.sqrt(2)
     # s = 0.5*math.sqrt(2) 
     while id < total_no_id:
+        print(f"At start of while loop (id) = {id}")
         if id >= 40: #
             break #
         xl = 0
@@ -37,8 +38,10 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         vc = 0
         if id == n*(n+1)/2:
             n = n + 1
+            print(f" After increament in the (n) = {n}")
         for square_id in range(n):
-            if n == (ln*ln)+1 and ln != 0:
+            print(f"At the start of (square id )= {square_id}")
+            if n == ((ln*ln)+1) and ln != 0:
                 print(f"in the if statament ln = {ln}")
                 if hl == 0 and vc == 1:
                     angle = math.pi/4
