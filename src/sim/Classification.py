@@ -80,7 +80,9 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     x = xl + 0.5
                     y = yl + 0.5
                     xl = xl + 1
-                    vc = vc + 1
+                    #vc = vc + 1
+                    if ln !=0 :
+                        vc = vc + 1
                 elif vc == ln:
                     hl = hl+1
                     # vc = 0
