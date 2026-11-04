@@ -49,8 +49,42 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     angle = math.pi/4
                 else:
                     angle = 0
-                if vc < ln:
-                    # if vc ==1 and hl == 0:
+                ### if vc < ln:
+                ##if vc < ln or (vc == ln and vc ==1):
+                #if vc ==1 and hl == 0:
+                if vc <= ln :
+                    print(f"In the (if vc < ln ) = {vc}")
+                    if vc ==1:
+                        print(f"In the (if vc == 1) = {vc}")
+                        if hl == 0:
+                            x = xl + 0.3535533905932
+                            y = yl + 1 + 0.3535533905932
+                            print(f"In the (if hl == 0) x = {x}, y = {y}")
+                        xl = xl + 0.7071067811865
+                        print(f"In the (if vc == 1) end xl = {xl}") 
+                        vc = vc + 1 #
+                    elif vc !=1:
+                        x = xl + 0.5
+                        y = yl + 0.5
+                        xl = xl + 1
+                        print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}")
+                        vc = vc + 1 #
+                    ##vc = vc + 1
+                    print(f"In the end of (if vc< ln) vc = {vc}")
+                if vc == ln:
+                    hl = hl+1
+                    # vc = 0
+                    xl= 0
+                    if hl == 0:
+                        yl = yl + 1 + 0.7071067811865
+                    elif hl != 0:
+                        yl = yl + 1
+                    ## if n == (hl+1)*(vc+1):
+                        ## ln = ln+1
+                    vc = 0
+                    ## elif ln*ln < n <= (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
+                """
+                if vc <= ln :
                     print(f"In the (if vc < ln ) = {vc}")
                     if vc ==1:
                         print(f"In the (if vc == 1) = {vc}")
@@ -79,6 +113,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         ## ln = ln+1
                     vc = 0
                     ## elif ln*ln < n <= (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
+                """
             elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
                 print(f"in the elif statament ln = {ln}")
                 angle = 0
