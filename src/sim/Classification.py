@@ -52,7 +52,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 ### if vc < ln:
                 ##if vc < ln or (vc == ln and vc ==1):
                 #if vc ==1 and hl == 0:
-                if vc <= ln :
+                if vc < ln :
                     print(f"In the (if vc < ln ) = {vc}")
                     if vc ==1:
                         print(f"In the (if vc == 1) = {vc}")
