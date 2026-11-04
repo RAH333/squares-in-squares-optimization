@@ -62,14 +62,14 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                             print(f"In the (if hl == 0) x = {x}, y = {y}")
                         xl = xl + 0.7071067811865
                         print(f"In the (if vc == 1) end xl = {xl}") 
-                        vc = vc + 1 #
+                        # vc = vc + 1 #
                     elif vc !=1:
                         x = xl + 0.5
                         y = yl + 0.5
                         xl = xl + 1
                         print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}")
-                        vc = vc + 1 #
-                    ##vc = vc + 1
+                        ## vc = vc + 1 #
+                    vc = vc + 1
                     print(f"In the end of (if vc< ln) vc = {vc}")
                 if vc == ln:
                     ##
