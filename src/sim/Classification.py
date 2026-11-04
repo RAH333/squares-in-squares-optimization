@@ -89,10 +89,10 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         xl = xl + 1
                         print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}")
                         # vc = vc + 1 #
-                    vc = vc + 1
+                    ##vc = vc + 1
                     print(f"In the end of (if vc< ln) vc = {vc}")
                     ##
-                    hl = hl+1
+                    # # hl = hl+1
                     # vc = 0
                     xl = 0
                     if hl == 0:
@@ -101,6 +101,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         yl = yl + 1
                     ## if n == (hl+1)*(vc+1):
                         ## ln = ln+1
+                    hl = hl+1
                     vc = 0
                     ## elif ln*ln < n <= (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
                 """
