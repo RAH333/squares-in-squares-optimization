@@ -81,8 +81,10 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         y = yl + 0.5
                         if vc == 0 and hl > 0 :
                             xl = xl + 1 + 0.7071067811865
-                        elif vc != 0 :
+                        else:
                             xl = xl + 1
+                        # elif vc != 0 :
+                            # xl = xl + 1
                         # xl = xl + 1
                         print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}") 
                     """
