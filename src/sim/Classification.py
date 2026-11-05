@@ -43,7 +43,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
             print(f"At the start of (square id )= {square_id}")
             print(f"In the for loop (ln) = {ln}")
             # if n == ((ln*ln)+1) and ln != 0 :
-            if n == ((ln*ln)+1) and ln != 0 and n > 9:
+            if n == ((ln*ln)+1) and ln != 0 and n > 4:
                 # if n == ((ln+1)*(ln+1)+1):
                 print(f"in the if statament ln = {ln}")
                 if hl == 0 and vc == 1:
@@ -126,15 +126,22 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     hl = hl+1
                     vc = 0
                     ## elif ln*ln < n <= (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
-            elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0) or n < 10:
+            elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0) or n < 5:
                 # elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0) :
                 print(f"in the elif statament ln = {ln}")
                 angle = 0
+                #
+                x = xl + 0.5
+                y = yl + 0.5
+                xl = xl + 1
+                #
                 if vc < ln or vc == 0:
                     ## if vc < ln:
-                    x = xl + 0.5
-                    y = yl + 0.5
-                    xl = xl + 1
+                    ## 
+                    #x = xl + 0.5
+                    # y = yl + 0.5
+                    # xl = xl + 1
+                    ## 
                     #vc = vc + 1
                     if ln !=0 :
                         vc = vc + 1
