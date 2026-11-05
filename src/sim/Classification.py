@@ -136,7 +136,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 x = xl + 0.5
                 y = yl + 0.5
                 xl = xl + 1
-                print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
+                print(f"In the (2) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 if vc < ln or vc == 0:
                     ## if vc < ln:
                     ## 
@@ -147,7 +147,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     #vc = vc + 1
                     if ln !=0 :
                         vc = vc + 1
-                    print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
+                    print(f"In the (3) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 elif vc == ln:
                     hl = hl+1
                     # vc = 0
@@ -156,11 +156,11 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     #if n == (hl+1)*(vc+1):
                     #ln = ln+1
                     vc = 0
-                    print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
+                    print(f"In the (4) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 
                 if n == (hl+1)*(vc+1):
                         ln = ln+1
-                print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
+                print(f"In the (5) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 
             # 6. Write the exact parameters for this specific step to the CSV
             writer.writerow([id, n, square_id, x, y, angle])
