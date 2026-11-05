@@ -30,7 +30,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
     # s = 0.5*math.sqrt(2) 
     while id < total_no_id:
         print(f"At start of while loop (id) = {id}")
-        if id >= 11: #
+        if id >= 55: #
             break #
         xl = 0
         yl = 0
