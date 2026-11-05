@@ -51,42 +51,40 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     angle = 0
                 if vc < ln :
                     print(f"In the (if vc < ln ) = {vc}")
-                    # if vc ==1:
-                    # 
-                    if vc ==1 and hl == 0:
+                    if vc ==1:
+                        """
+                        # 
+                        if vc ==1 and hl == 0:
                         x = xl + 0.3535533905932
                         y = yl + 1 + 0.3535533905932
                         print(f"In the (if hl == 0) x = {x}, y = {y}")
                         xl = xl + 0.7071067811865
                         #
-                        ## print(f"In the (if vc == 1) = {vc}")
                         """
+                        print(f"In the (if vc == 1) = {vc}")
+                        
                         if hl == 0:
                             x = xl + 0.3535533905932
                             y = yl + 1 + 0.3535533905932
                             print(f"In the (if hl == 0) x = {x}, y = {y}")
                             xl = xl + 0.7071067811865
-                        """
+                        elif hl != 0 :
+                            x = xl + 0.5
+                            y = yl + 0.5
+                            xl = xl + 1
+                            
                         # xl = xl + 0.7071067811865
                         print(f"In the (if vc == 1) end xl = {xl}")
                     elif vc !=1:
                         ## elif vc ==0:
                         x = xl + 0.5
                         y = yl + 0.5
-                        if vc == 0 and hl >0:
+                        if vc == 0 and hl > 0 :
                             xl = xl + 1 + 0.7071067811865
-                        elif vc != 0 and hl > 0:
+                        elif vc != 0 :
                             xl = xl + 1
-                            
-                        xl = xl + 1
-                        print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}")
-                    
-                    """
-                    elif vc !=1:
-                        x = xl + 0.5
-                        y = yl + 0.5
-                        xl = xl + 1
-                        print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}")
+                        # xl = xl + 1
+                        print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}") 
                     """
                     # #
                     elif vc !=1:
@@ -95,6 +93,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         xl = xl + 1
                         print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}")
                     ##
+                    """
                     vc = vc + 1
                     print(f"In the end of (if vc< ln) vc = {vc}")
                 elif vc == ln:
