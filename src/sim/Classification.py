@@ -126,15 +126,17 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     hl = hl+1
                     vc = 0
                     ## elif ln*ln < n <= (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
-            elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0) or n < 5:
+            elif (n == (ln+1)*(ln+1)) or (n != (ln*ln)+1 and ln >1) or n < 5:
+                ###### #### elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0) or n < 5:
                 # elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0) :
                 print(f"in the elif statament ln = {ln}")
                 angle = 0
                 #
+                print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 x = xl + 0.5
                 y = yl + 0.5
                 xl = xl + 1
-                #
+                print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 if vc < ln or vc == 0:
                     ## if vc < ln:
                     ## 
@@ -145,6 +147,8 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     #vc = vc + 1
                     if ln !=0 :
                         vc = vc + 1
+                    print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
+                x = xl + 0.5
                 elif vc == ln:
                     hl = hl+1
                     # vc = 0
@@ -153,8 +157,12 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     #if n == (hl+1)*(vc+1):
                     #ln = ln+1
                     vc = 0
+                    print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
+                x = xl + 0.5
                 if n == (hl+1)*(vc+1):
                         ln = ln+1
+                print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
+                x = xl + 0.5
             # 6. Write the exact parameters for this specific step to the CSV
             writer.writerow([id, n, square_id, x, y, angle])
             id = id +1
