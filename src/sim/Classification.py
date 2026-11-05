@@ -148,7 +148,6 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     if ln !=0 :
                         vc = vc + 1
                     print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
-                x = xl + 0.5
                 elif vc == ln:
                     hl = hl+1
                     # vc = 0
@@ -158,11 +157,11 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     #ln = ln+1
                     vc = 0
                     print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
-                x = xl + 0.5
+                
                 if n == (hl+1)*(vc+1):
                         ln = ln+1
                 print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
-                x = xl + 0.5
+                
             # 6. Write the exact parameters for this specific step to the CSV
             writer.writerow([id, n, square_id, x, y, angle])
             id = id +1
