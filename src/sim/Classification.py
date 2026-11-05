@@ -158,7 +158,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                     vc = 0
                     print(f"In the (4) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 
-                if n == (hl+1)*(vc+1):
+                if n == (hl+1)*(vc+1) and hl == vc:
                         ln = ln+1
                 print(f"In the (5) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 
