@@ -18,20 +18,14 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         writer.writerow(headers)
     no_of_puzzles = 1000
     total_no_id = no_of_puzzles*(no_of_puzzles+1)/2
-    # n = 1
     n = 0
     ln = 0
     id = 0
     x = 0
     y = 0
     angle = 0
-    # a = math.pi/4
-    # sdvh = 0.5/math.sqrt(2)
-    # s = 0.5*math.sqrt(2) 
     while id < total_no_id:
         print(f"At start of while loop (id) = {id}")
-        # if id >= 55: #
-            # break #
         xl = 0
         yl = 0
         hl = 0
@@ -42,9 +36,7 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
         for square_id in range(n):
             print(f"At the start of (square id )= {square_id}")
             print(f"In the for loop (ln) = {ln}")
-            # if n == ((ln*ln)+1) and ln != 0 :
             if n == ((ln*ln)+1) and ln != 0 and n > 4:
-                # if n == ((ln+1)*(ln+1)+1):
                 print(f"in the if statament ln = {ln}")
                 if hl == 0 and vc == 1:
                     angle = math.pi/4
@@ -53,15 +45,6 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                 if vc < ln :
                     print(f"In the (if vc < ln ) = {vc}")
                     if vc ==1:
-                        """
-                        # 
-                        if vc ==1 and hl == 0:
-                        x = xl + 0.3535533905932
-                        y = yl + 1 + 0.3535533905932
-                        print(f"In the (if hl == 0) x = {x}, y = {y}")
-                        xl = xl + 0.7071067811865
-                        #
-                        """
                         print(f"In the (if vc == 1) = {vc}")
                         
                         if hl == 0:
@@ -74,29 +57,15 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                             y = yl + 0.5
                             xl = xl + 1
                             print(f"In the (if hl != 0) x = {x}, y = {y}")
-                        # xl = xl + 0.7071067811865
                         print(f"In the (if vc == 1) end xl = {xl}")
                     elif vc !=1:
-                        ## elif vc ==0:
                         x = xl + 0.5
                         y = yl + 0.5
                         if vc == 0 and hl > 0 :
                             xl = xl + 1 + 0.7071067811865
                         else:
                             xl = xl + 1
-                        # elif vc != 0 :
-                            # xl = xl + 1
-                        # xl = xl + 1
-                        print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}") 
-                    """
-                    # #
-                    elif vc !=1:
-                        x = xl + 0.5
-                        y = yl + 0.5
-                        xl = xl + 1
                         print(f"In the (vc !=1) x = {x}, y = {y}, xl = {xl}")
-                    ##
-                    """
                     vc = vc + 1
                     print(f"In the end of (if vc< ln) vc = {vc}")
                 elif vc == ln:
@@ -121,40 +90,24 @@ with open(csv_filename, mode='a', newline='', encoding='utf-8') as file:
                         yl = yl + 1 + 0.7071067811865
                     elif hl != 0:
                         yl = yl + 1
-                    ## if n == (hl+1)*(vc+1):
-                        ## ln = ln+1
                     hl = hl+1
                     vc = 0
-                    ## elif ln*ln < n <= (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0):
             elif (n == (ln+1)*(ln+1)) or (n != (ln*ln)+1 and ln >1) or n < 5:
-                ###### #### elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0) or n < 5:
-                # elif n == (ln+1)*(ln+1) or (n != (ln*ln)+1 and ln >0) :
                 print(f"in the elif statament ln = {ln}")
                 angle = 0
-                #
                 print(f"In the (1) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 x = xl + 0.5
                 y = yl + 0.5
                 xl = xl + 1
                 print(f"In the (2) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 if vc < ln or vc == 0:
-                    ## if vc < ln:
-                    ## 
-                    #x = xl + 0.5
-                    # y = yl + 0.5
-                    # xl = xl + 1
-                    ## 
-                    #vc = vc + 1
                     if ln !=0 :
                         vc = vc + 1
                     print(f"In the (3) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 elif vc == ln:
                     hl = hl+1
-                    # vc = 0
                     xl= 0
                     yl = yl + 1
-                    #if n == (hl+1)*(vc+1):
-                    #ln = ln+1
                     vc = 0
                     print(f"In the (4) x = {x}, y = {y}, xl = {xl}, yl = {yl}, hl = {hl} , vc = {vc} , ln = {ln}  ")
                 
